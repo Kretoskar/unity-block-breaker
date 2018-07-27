@@ -49,4 +49,12 @@ public class Ball : MonoBehaviour {
         Vector2 paddlePos = new Vector2(mPaddle.transform.position.x, mPaddle.transform.position.y);
         transform.position = paddlePos + mPaddleToBallVector;
     }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (mHasStarted)
+        {
+            GetComponent<AudioSource>().Play();
+        }
+    }
 }
