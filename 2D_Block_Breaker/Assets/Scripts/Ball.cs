@@ -15,13 +15,20 @@ public class Ball : MonoBehaviour {
     [SerializeField]
     private float mYPush = 15f;
 
+    [SerializeField]
+    private AudioClip[] mAudioClips;
+
     //state
     private Vector2 mPaddleToBallVector;
     private bool mHasStarted = false;
 
+    //Chached component references
+    private AudioSource mAudioSource;
+
 	// Use this for initialization
 	void Start ()
     {
+        mAudioSource = GetComponent<AudioSource>();
         mPaddleToBallVector = transform.position - mPaddle.transform.position;	
 	}
 	
@@ -54,7 +61,8 @@ public class Ball : MonoBehaviour {
     {
         if (mHasStarted)
         {
-            GetComponent<AudioSource>().Play();
+            AudioClip clip = mAudioClips[UnityEngine.Random.Range(0, mAudioClips.Length)];
+            mAudioSource.PlayOneShot(clip);
         }
     }
 }
