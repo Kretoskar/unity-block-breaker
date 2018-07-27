@@ -5,10 +5,10 @@ using UnityEngine;
 public class LoseTrigger : MonoBehaviour {
 
     [SerializeField]
-    GameObject gameOverUI;
+    private GameObject mGameOverUI;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        gameOverUI.SetActive(true);
+        mGameOverUI.SetActive(true);
     }
 }
