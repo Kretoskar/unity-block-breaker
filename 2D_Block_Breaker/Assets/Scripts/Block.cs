@@ -5,6 +5,7 @@ using UnityEngine;
 public class Block : MonoBehaviour {
 
     private Level mLevel;
+    private GameStatus mGameStatus;
 
     private void Start()
     {
@@ -19,6 +20,8 @@ public class Block : MonoBehaviour {
 
     private void DestroyBlock()
     {
+        mGameStatus = FindObjectOfType<GameStatus>();
+        mGameStatus.UpdateScore();
         Destroy(gameObject);
         mLevel.BlockDestroyed();
     }
