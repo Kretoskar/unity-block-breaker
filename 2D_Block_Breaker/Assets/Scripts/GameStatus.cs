@@ -4,7 +4,10 @@ using UnityEngine.UI;
 public class GameStatus : MonoBehaviour {
 
     [SerializeField]
-    Text mScoreText;
+    private Text mScoreText;
+
+    [SerializeField]
+    private Text mHighScoreText;
 
     [Range(0.1f, 2f)][SerializeField]
     private float mGameSpeed = 1f;
@@ -29,6 +32,7 @@ public class GameStatus : MonoBehaviour {
 
     private void Start()
     {
+        mHighScoreText.text = PlayerPrefs.GetInt("HighScore", 0).ToString();
         mScoreText.text = mCurrentScore.ToString();
     }
 
@@ -40,5 +44,16 @@ public class GameStatus : MonoBehaviour {
     {
         mCurrentScore += mPointPerBlock;
         mScoreText.text = mCurrentScore.ToString();
+        int highScore = PlayerPrefs.GetInt("HighScore");
+        if(mCurrentScore > highScore)
+        {
+            PlayerPrefs.SetInt("HighScore", mCurrentScore);
+            mHighScoreText.text = mCurrentScore.ToString();
+        }
+    }
+
+    public void ResetGame()
+    {
+        Destroy(gameObject);
     }
 }

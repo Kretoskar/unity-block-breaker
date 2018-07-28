@@ -6,6 +6,12 @@ public class Level : MonoBehaviour {
     [SerializeField]
     private int mBreakableBlocks;       //Serialized for debbuging
 
+    [SerializeField]
+    private GameObject mWinUI;
+
+    [SerializeField]
+    private GameObject mLoseTrigger;
+ 
 	public void CountBreakableBlocks()
     {
         mBreakableBlocks++;
@@ -23,7 +29,15 @@ public class Level : MonoBehaviour {
     private void LoadNextScene()
     {
         int currentScene = SceneManager.GetActiveScene().buildIndex;
-        int sceneToLoad = currentScene + 1;
-        SceneManager.LoadScene(sceneToLoad);
+        if (currentScene >= 5)
+        {
+            mWinUI.SetActive(true);
+            mLoseTrigger.SetActive(false);
+        }
+        else
+        {
+            int sceneToLoad = currentScene + 1;
+            SceneManager.LoadScene(sceneToLoad);
+        }
     }
 }
