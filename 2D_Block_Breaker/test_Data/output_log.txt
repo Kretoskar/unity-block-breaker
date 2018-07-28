@@ -19,13 +19,31 @@ Platform assembly: C:\Users\admin\Desktop\Projekty\_Unity\block-breaker\unity-bl
 Loading C:\Users\admin\Desktop\Projekty\_Unity\block-breaker\unity-block-breaker\2D_Block_Breaker\test_Data\Managed\UnityEngine.PlaymodeTestsRunner.dll into Unity Child Domain
 Platform assembly: C:\Users\admin\Desktop\Projekty\_Unity\block-breaker\unity-block-breaker\2D_Block_Breaker\test_Data\Managed\UnityEngine.Analytics.dll (this message is harmless)
 Loading C:\Users\admin\Desktop\Projekty\_Unity\block-breaker\unity-block-breaker\2D_Block_Breaker\test_Data\Managed\UnityEngine.Analytics.dll into Unity Child Domain
-- Completed reload, in  0.085 seconds
+- Completed reload, in  0.125 seconds
 Platform assembly: C:\Users\admin\Desktop\Projekty\_Unity\block-breaker\unity-block-breaker\2D_Block_Breaker\test_Data\Managed\System.Core.dll (this message is harmless)
 Platform assembly: C:\Users\admin\Desktop\Projekty\_Unity\block-breaker\unity-block-breaker\2D_Block_Breaker\test_Data\Managed\System.dll (this message is harmless)
 desktop: 1920x1080 60Hz; virtual: 3600x1080 at -1680,0
 <RI> Initializing input.
 <RI> Input initialized.
 <RI> Initialized touch support.
-UnloadTime: 3.621336 ms
+UnloadTime: 2.647913 ms
+Unloading 5 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 8.964538 ms
+
+Unloading 3 unused Assets to reduce memory usage. Loaded Objects now: 339.
+Total: 0.287765 ms (FindLiveObjects: 0.032763 ms CreateObjectMapping: 0.014605 ms MarkObjects: 0.234870 ms  DeleteObjects: 0.004736 ms)
+
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 1.281719 ms
+
+Unloading 1 unused Assets to reduce memory usage. Loaded Objects now: 351.
+Total: 0.863295 ms (FindLiveObjects: 0.123553 ms CreateObjectMapping: 0.052500 ms MarkObjects: 0.674215 ms  DeleteObjects: 0.010657 ms)
+
+Unloading 1 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 1.153429 ms
+
+Unloading 18 unused Assets to reduce memory usage. Loaded Objects now: 244.
+Total: 0.282633 ms (FindLiveObjects: 0.033158 ms CreateObjectMapping: 0.015394 ms MarkObjects: 0.155922 ms  DeleteObjects: 0.076974 ms)
+
 Setting up 1 worker threads for Enlighten.
-  Thread -> id: 16b4 -> priority: 1 
+  Thread -> id: 2920 -> priority: 1 
