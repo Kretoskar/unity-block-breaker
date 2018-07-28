@@ -8,6 +8,9 @@ public class Level : MonoBehaviour {
 
     [SerializeField]
     private GameObject mWinUI;
+
+    [SerializeField]
+    private GameObject mLoseTrigger;
  
 	public void CountBreakableBlocks()
     {
@@ -29,6 +32,7 @@ public class Level : MonoBehaviour {
         if (currentScene >= 5)
         {
             mWinUI.SetActive(true);
+            mLoseTrigger.SetActive(false);
         }
         else
         {
