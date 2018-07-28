@@ -41,4 +41,9 @@ public class GameStatus : MonoBehaviour {
         mCurrentScore += mPointPerBlock;
         mScoreText.text = mCurrentScore.ToString();
     }
+
+    public void ResetGame()
+    {
+        Destroy(gameObject);
+    }
 }
