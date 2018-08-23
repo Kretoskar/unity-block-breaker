@@ -17,6 +17,9 @@ public class GameStatus : MonoBehaviour {
     [SerializeField]
     private int mCurrentScore = 0;
 
+    [SerializeField]
+    private bool mIsAutoPlayEnabled;
+
     private void Awake()
     {
         int gameStatusCount = FindObjectsOfType<GameStatus>().Length;
@@ -55,5 +58,10 @@ public class GameStatus : MonoBehaviour {
     public void ResetGame()
     {
         Destroy(gameObject);
+    }
+
+    public bool IsAutoPlayEnabled()
+    {
+        return mIsAutoPlayEnabled;
     }
 }
